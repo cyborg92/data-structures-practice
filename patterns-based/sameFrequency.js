@@ -39,3 +39,35 @@ function sameFrequency(num1,num2){
 }
 
 sameFrequency(182,281);
+
+
+//---------------------repractice solution------------------------
+
+function sameFrequency(num1, num2) {
+    let str1 = num1.toString();
+    let str2 = num2.toString();
+    if (str1.length !== str2.length) {
+      console.log('false');
+      return false;
+    }
+  
+    let lookupObj = {};
+  
+    for (let i = 0; i < str1.length; i++) {
+      lookupObj[str1[i]] = (lookupObj[str1[i]] || 0) + 1;
+    }
+  
+    for (let i = 0; i < str2.length; i++) {
+      if (!lookupObj[str2[i]]) {
+        console.log('lookupObj', lookupObj);
+        console.log('false');
+        return false;
+      }
+      lookupObj[str2[i]] -= 1;
+    }
+    console.log('lookupObj', lookupObj);
+    console.log('true');
+    return true;
+  
+  }
+  sameFrequency(34, 14);
