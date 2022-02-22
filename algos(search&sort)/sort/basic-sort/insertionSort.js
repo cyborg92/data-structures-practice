@@ -7,11 +7,6 @@ function insertionSortAlgo(arr){
     for(let i=1;i<arr.length;i++){
         let currentVal=arr[i];
         for(var j=i-1; j>=0 && arr[j]>currentVal;j--){
-            console.log('i-->',i);
-            console.log('j--->',j);
-            console.log('currentVal--->',currentVal);
-            console.log('arr[j]--->',arr[j])
-            console.log('arr[j+1--->]',arr[j+1]);
             arr[j+1]=arr[j]
             console.log('post changearr[j+1--->]',arr[j+1]);
         }
