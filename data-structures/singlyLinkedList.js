@@ -11,7 +11,7 @@ class SinglyLinkedList {
     this.tail = null;
     this.length = 0;
   }
-  //method to add value to linked list
+  //method to add value to linked list at the end of the linked list
   push(val) {
     let newNode = new Node(val);
     if (!this.head) {
@@ -46,14 +46,51 @@ class SinglyLinkedList {
     }
     return current;
   }
+  // removing a new node from beginning of the linked list
   shift() {
     if (!this.head) {
       return undefined;
     } else {
       let temp = this.head;
       this.head = this.head.next;
-      delete temp;
+      this.length--;
+      if (this.length === 0) {
+        this.tail = null;
+      }
+
+      return temp;
     }
   }
-  unshift() {}
+  // adding new node at beginning of linked list
+  unshift(val) {
+    let newNode = new Node(val);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.length++;
+    return this;
+  }
+  get(val) {
+    if (val<0 || val>=this.length || !this.head) {
+      return undefined;
+    } else {
+      let current = this.head;
+      for (let i = 0; i <val ; i++) {
+        current = current.next;
+      }
+      return current;
+    }
+  }
 }
+
+var list = new SinglyLinkedList()
+
+list.push("HELLO")  
+list.push("GOODBYE") 
+list.push("!") 
+list.push("<3")
+list.push(":)") 
