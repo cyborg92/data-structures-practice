@@ -1,32 +1,43 @@
 /**
- * Stacks are LIFO data structure, which means the last element added to the stack 
+ * Stacks are LIFO data structure, which means the last element added to the stack
  * will be the first element to leave the stack.
- * 
+ *
  * <--------Use Case--------->
  * managing functions invocations
  * undo and redo operations
  * Routing (history Object) is treated like a stack
- * 
- * We can use an array to create a stack
+ *
  */
-
-let stack=[];
-stack.push(1);
-stack.push(2);
-stack.push(2);
-stack;
-stack.pop();
-stack.pop();
-stack.pop();
-
-//Above operations of push and pop are O(1) but if unshift and shift are used to add and remove elements respectively
-// then O(n) will be time complexity as arrays need to be re-indexed;
-
-let stack1=[];
-stack1.unshift(1);
-stack1.unshift(2);
-stack1.unshift(2);
-stack;
-stack1.shift();
-stack1.shift();
-stack1.shift();
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+class Stack {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.size = 0;
+  }
+  push(val) {
+    let newNode = new Node(val);
+    if (this.size === 0) {
+      this.first = newNode;
+      this.last = newNode;
+    } else {
+      newNode.next = this.first;
+      this.first = newNode;
+    }
+    this.size++;
+    return this;
+  }
+  pop() {
+    if (this.size === 0) return undefined;
+    let removedNode = this.first;
+    this.first = removedNode.next;
+    removedNode.next = null;
+    this.size--;
+    return removedNode;
+  }
+}
