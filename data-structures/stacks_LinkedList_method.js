@@ -26,18 +26,27 @@ class Stack {
       this.first = newNode;
       this.last = newNode;
     } else {
-      newNode.next = this.first;
+      let temp=this.first;
       this.first = newNode;
+      this.first.next=temp;
     }
-    this.size++;
+    ++this.size;
     return this;
   }
   pop() {
     if (this.size === 0) return undefined;
     let removedNode = this.first;
-    this.first = removedNode.next;
-    removedNode.next = null;
+    if(this.first===this.last){
+      this.last=null;
+    }
+    this.first = this.first.next;
     this.size--;
-    return removedNode;
+    return removedNode.value;
   }
 }
+
+
+/* BIG O of stacks 
+* Insertaion and removal - O(1)
+* access and search - O(n)
+*/
