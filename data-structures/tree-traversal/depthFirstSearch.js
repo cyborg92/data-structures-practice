@@ -79,6 +79,8 @@ class Node {
       }
       return data;
     }
+    // visit the node first and then look left and right
+    // flow followed is root,left,right
     DFSPreOrder() {
       var data = [];
       function traverse(node) {
@@ -87,8 +89,10 @@ class Node {
         if (node.right) traverse(node.right);
       }
       traverse(this.root);
-      return data;
+      return data; // [10,6,3,8,15,20]
     }
+    // visit a node after we have looked left and right 
+    // flow is left, right, root,
     DFSPostOrder() {
       var data = [];
       function traverse(node) {
@@ -97,8 +101,9 @@ class Node {
         data.push(node.value);
       }
       traverse(this.root);
-      return data;
+      return data; // [3,8,6,20,15,10]
     }
+    // flow is left root right
     DFSInOrder() {
       var data = [];
       function traverse(node) {
@@ -107,7 +112,7 @@ class Node {
         if (node.right) traverse(node.right);
       }
       traverse(this.root);
-      return data;
+      return data; //[3,6,8,10,15,20]
     }
   }
   
