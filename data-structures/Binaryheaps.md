@@ -12,10 +12,8 @@
  # Storing Heaps, they can be stored using an array/list
  ### how to find child node from parent node --->
  *  For an index of array n parent node :
- *  1. the left child is stored at 2n+1
- *  2. the right child is stored at 2n+2.
- * 
+    1. the left child is stored at 2n+1
+    2. the right child is stored at 2n+2.
  ### how to find parent node from child node--->
- * 
  * For any child node:
- * - the parent node is at (n-1)/2 and floor it i.e. Math.floor((n-1)/2);
+ - The parent node is at (n-1)/2 and floor it i.e. Math.floor((n-1)/2);
