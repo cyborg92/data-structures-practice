@@ -8,7 +8,6 @@ there will be fewer nodes to keep track of.
 
 If a really deep long tree with less width, then BFS makes sense.
 
-
 # When to use DFS In-order
 
 when you want the items to be returned in a sorted order, meaning the items to the left are less than root and items to right are greater than root and look more in sorted manner in increasing order.
