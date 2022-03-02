@@ -5,7 +5,8 @@
  * A Binary heap is as compact as possible. All the children of the each node are as full as they can be and left
  * childen are filled first.
  * In MinBinaryHeap, parent nodes are always smaller than child nodes.
- ### Note : Binary Heaps are used to implement Priority Queues, which are commonly used as data structures.
+ ### Note :
+ * Binary Heaps are used to implement Priority Queues, which are commonly used as data structures.
  * they are also used a bit for graph traversal algos
 
  # Storing Heaps, they can be stored using an array/list
