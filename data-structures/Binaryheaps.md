@@ -24,3 +24,9 @@
 - For any child node:
 
 * The parent node is at (n-1)/2 and floor it i.e. Math.floor((n-1)/2);
+
+### Big O of Binary Heaps :
+
+- Insertion : O(log n)
+- Removal : O(log n)
+- Search : O(n)

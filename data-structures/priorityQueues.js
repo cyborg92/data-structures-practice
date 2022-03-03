@@ -1,34 +1,41 @@
-class MaxBinaryHeap {
+// Priority queue implemented using heap
+
+class Node {
+  constructor(val, priority) {
+    this.val = val;
+    this.priority = priority;
+  }
+}
+class PriorityQueue {
   constructor() {
     this.values = [];
   }
-  //Inserting a value into heap where parent node is greater than child node, binary max heap
-  Insert(val) {
-    this.values.push(val);
+  enqueue(val, priority) {
+    let newNode = new Node(val, priority);
+    this.values.push(newNode);
     this.bubbleUp();
   }
-  // this method bubble up is used to move the element added into correct place.
+
   bubbleUp() {
     let index = this.values.length - 1;
     const element = this.values[index];
     while (index > 0) {
       let parentIndex = Math.floor((index - 1) / 2);
       let parentElem = this.values[parentIndex];
-      if (element <= parentElem) break;
+      if (element.priority >= parentElem.priority) break;
       this.values[parentIndex] = element;
       this.values[index] = parentElem;
       index = parentIndex;
     }
   }
-  // used to remove the top most element from heap, mostly root.
-  extractMax() {
-    const max = this.values[0];
+  dequeue() {
+    const min = this.values[0];
     const end = this.values.pop();
     if (this.values.length > 0) {
       this.values[0] = end;
       this.sinkDown();
     }
-    return max;
+    return min;
   }
   sinkDown() {
     let index = 0;
@@ -39,14 +46,14 @@ class MaxBinaryHeap {
       let rightIndex = 2 * index + 2;
       let swap = null;
       if (leftIndex < length) {
-        if (element > this.values[leftIndex]) {
+        if (element.priority > this.values[leftIndex].priority) {
           swap = leftIndex;
         }
       }
       if (rightIndex < length) {
         if (
-          (swap === null && element > this.values[rightIndex]) ||
-          (swap !== null && this.values[rightIndex] > this.values[leftIndex])
+          (swap === null && element.priority < this.values[rightIndex].priority) ||
+          (swap !== null && this.values[rightIndex].priority < this.values[leftIndex].priority)
         ) {
           swap = rightIndex;
         }
@@ -59,4 +66,4 @@ class MaxBinaryHeap {
   }
 }
 
-let newHeap = new MaxBinaryHeap();
+let newPriorityQueue = new PriorityQueue();
