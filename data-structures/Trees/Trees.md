@@ -21,10 +21,10 @@
 
 ### Binary Search Tree:
 
-- It has type of binary tree, ordered or sorted binary tree in which nodes are arragned in certain order.
+- It is type of binary tree, ordered or sorted binary tree in which nodes are arragned in certain order.
 - each node can have max of two children
 - Every node to the left of the parent node is less than parent node
-- Every node to the right of the pareent node is greater than the parent node.
+- Every node to the right of the parent node is greater than the parent node.
 
 ### Big O of binary search trees
 
