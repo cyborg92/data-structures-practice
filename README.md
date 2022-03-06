@@ -1,2 +1,2 @@
 # data-structures-practice
-Data structures practice questions in JS
+Data structures practice in JS
