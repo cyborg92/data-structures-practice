@@ -31,3 +31,9 @@
   - Seperate chaining : At each index in our array, we store values using more sophisticated data structure(eg.array/linkedlist). This allows us to store multiple key-value pairs at same index.
 
   - Linear probing - In this, when we find a collision, we search through the array to find next empty slot.This allows us to store a single key-value at each index.
+
+#### Big O of Hash Tables
+
+Average Case
+
+- Insertion,Deletion and Access :O(1)
