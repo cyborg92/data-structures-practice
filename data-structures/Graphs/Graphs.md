@@ -31,3 +31,43 @@ Adjacency list is the most common way to represent graphs. With this approach of
 ### Adjacency matrix
 
 An adjacency matrix represents a graph with n nodes as a n by n boolean matrix, in which matrix[u][v] is set to true if an edge exists from node u to node v.
+
+### Big O Adjacency lists vs Matrix
+
+In the chart below, V represents the number of verticies in the graph and E represents the number of edges in the graph.
+
+<table>
+  <thead>
+    <tr>
+      <th>Representation</th>
+      <th>Getting all adjacent edges for a vertex</th>
+      <th>Traversing entire graph</th>
+      <th>hasEdge(u, v)</th>
+      <th>Space</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Adjacency matrix</strong></td>
+      <td>O(V)</td>
+      <td>O(V<sup>2</sup>)</td>
+      <td>O(1)</td>
+      <td>O(V<sup>2</sup>)</td>
+    </tr>
+    <tr>
+      <td><strong>Edge Set</strong></td>
+      <td>O(E)</td>
+      <td>O(E)</td>
+      <td>O(E)</td>
+      <td>O(E)</td>
+    </tr>
+    <tr>
+      <td><strong>Adjacency List</strong></td>
+      <td>O(1)</td>
+      <td>O(V + E)</td>
+      <td>O(max number of edges a vertex has)</td>
+      <td>O(E + V)</td>
+    </tr>
+  </tbody>
+</table>
+
