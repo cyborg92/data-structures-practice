@@ -1,15 +1,15 @@
 ### Weighted vs Unweighted graph
 
-![Weighted vs Unweighted graph](weightedVsUnweightedGraph.png)
+![Weighted vs Unweighted graph](images/weightedVsUnweightedGraph.png)
 
 ### Directed vs Undirected graph
 
-![Directed vs Undirected graph](directedGraph.png)
+![Directed vs Undirected graph](images/directedGraph.png)
 
 ### Adjacency List
 
-![Adjacency List](adjList.png)
+![Adjacency List](images/adjList.png)
 
 ### Adjacency Matrix
 
-![Adjacency Matrix](adjMatrix.png)
+![Adjacency Matrix](images/adjMatrix.png)
