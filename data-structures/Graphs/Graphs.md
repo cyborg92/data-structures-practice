@@ -55,13 +55,6 @@ In the chart below, V represents the number of verticies in the graph and E repr
       <td>O(V<sup>2</sup>)</td>
     </tr>
     <tr>
-      <td><strong>Edge Set</strong></td>
-      <td>O(E)</td>
-      <td>O(E)</td>
-      <td>O(E)</td>
-      <td>O(E)</td>
-    </tr>
-    <tr>
       <td><strong>Adjacency List</strong></td>
       <td>O(1)</td>
       <td>O(V + E)</td>
