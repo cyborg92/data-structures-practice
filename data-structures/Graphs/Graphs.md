@@ -27,4 +27,5 @@ A graph is a collection of nodes and connections between those nodes.
 ![Weighted vs Unweighted graph](weightedVsUnweightedGraph.png)
 
 ### Directed vs Undirected graph
+
 ![Directed vs Undirected graph](directedGraph.png)
