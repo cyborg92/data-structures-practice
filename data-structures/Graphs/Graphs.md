@@ -39,27 +39,41 @@ In the chart below, V represents the number of verticies in the graph and E repr
 <table>
   <thead>
     <tr>
-      <th>Representation</th>
-      <th>Getting all adjacent edges for a vertex</th>
-      <th>Traversing entire graph</th>
-      <th>hasEdge(u, v)</th>
-      <th>Space</th>
+      <th>Operation</th>
+      <th>Adjacency List</th>
+      <th>Adjacency Matrix</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Adjacency matrix</strong></td>
-      <td>O(V)</td>
-      <td>O(V<sup>2</sup>)</td>
+      <td><strong>Add Vertex</strong></td>
       <td>O(1)</td>
       <td>O(V<sup>2</sup>)</td>
     </tr>
     <tr>
-      <td><strong>Adjacency List</strong></td>
+      <td><strong>Add Edge</strong></td>
       <td>O(1)</td>
+      <td>O(1)</td>
+    </tr>
+    <tr>
+      <td><strong>Remove Vertex</strong></td>
       <td>O(V + E)</td>
-      <td>O(max number of edges a vertex has)</td>
-      <td>O(E + V)</td>
+      <td>O(V<sup>2</sup>)</td>
+    </tr>
+    <tr>
+      <td><strong>Remove Edge</strong></td>
+      <td>O(E)</td>
+      <td>O(1)</td>
+    </tr>
+    <tr>
+      <td><strong>Query</strong></td>
+      <td>O(V + E)</td>
+      <td>O(1)</td>
+    </tr>
+    <tr>
+      <td><strong>Storage</strong></td>
+      <td>O(V + E)</td>
+      <td>O(V<sup>2</sup>)</td>
     </tr>
   </tbody>
 </table>
