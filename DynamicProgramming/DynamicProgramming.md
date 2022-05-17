@@ -21,5 +21,7 @@ Storing the results of expensive function calls and returning the cached result 
 
 ## Tabulation
 
+Bottom to top approach
+
 Storing the results of previous result in a table (usually an array). This is usally done using iteration.
 Better space complexity can be achieved using tabulation.
