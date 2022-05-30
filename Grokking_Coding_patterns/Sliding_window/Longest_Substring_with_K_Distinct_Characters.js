@@ -19,3 +19,35 @@ Input: String="cbbebi", K=3
 Output: 5
 Explanation: The longest substrings with no more than '3' distinct characters are "cbbeb" & "bbebi".
 */
+
+function longestSubString(str, k) {
+  let windowStart = 0;
+  let charMap = {};
+  let maxLength = 0;
+  let windowEnd;
+  for (windowEnd = 0; windowEnd < str.length; windowEnd++) {
+    let tempChar = str[windowEnd];
+    let rightChar = str[windowEnd];
+    charMap[rightChar] = (charMap[rightChar] || 0) + 1;
+    while (Object.keys(charMap).length > k) {
+      let leftChar = str[windowStart];
+      charMap[leftChar] -= 1;
+      if (charMap[leftChar] == 0) {
+        delete charMap[leftChar];
+      }
+      windowStart += 1;
+    }
+    maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
+  }
+  return maxLength;
+}
+
+console.log(
+  `Length of the longest substring: ${longestSubString("araaci", 2)}`
+);
+console.log(
+  `Length of the longest substring: ${longestSubString("araaci", 1)}`
+);
+console.log(
+  `Length of the longest substring: ${longestSubString("cbbebi", 3)}`
+);
