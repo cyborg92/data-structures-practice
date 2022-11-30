@@ -21,18 +21,18 @@ function fruits_into_baskets(fruitsArr) {
     let windowStart = 0;
     let windowEnd;
     let maxLength = 0;
-    let charMap = {};
+    let fruitFrequency  = {};
     for (windowEnd = 0; windowEnd < fruitsArr.length; windowEnd++) {
-        const rightChar = fruitsArr[windowEnd];
-        if(!charMap[rightChar]){
-            charMap[rightChar]=0;
+        const rightFruit  = fruitsArr[windowEnd];
+        if(!fruitFrequency [rightFruit ]){
+            fruitFrequency [rightFruit ]=0;
         }
-        charMap[rightChar]+=1;
-        while(Object.keys(charMap).length>2){
-            const leftChar= fruitsArr[windowStart];
-            charMap[leftChar]-=1;
-            if(charMap[leftChar]=== 0){
-                delete charMap[leftChar];
+        fruitFrequency [rightFruit ]+=1;
+        while(Object.keys(fruitFrequency ).length>2){
+            const leftFruit = fruitsArr[windowStart];
+            fruitFrequency [leftFruit ]-=1;
+            if(fruitFrequency [leftFruit ]=== 0){
+                delete fruitFrequency [leftFruit ];
             }
             windowStart+=1;
         }
