@@ -17,10 +17,10 @@ Input: Fruit=['A', 'B', 'C', 'B', 'B', 'C']
 Output: 5
 Explanation: We can put 3 'B' in one basket and two 'C' in the other basket. 
 This can be done if we start with the second letter: ['B', 'C', 'B', 'B', 'C']
+
+Solution #
+This problem follows the Sliding Window pattern and is quite similar to Longest Substring with K Distinct Characters. In this problem, we need to find the length of the longest subarray with no more than two distinct characters (or fruit types!). This transforms the current problem into Longest Substring with K Distinct Characters where K=2.
 */
-
-//Solution same as Longest_Substring_with_K_distinct_characters.
-
 
 function fruits_into_baskets(fruits) {
   let windowStart = 0,
@@ -49,10 +49,10 @@ function fruits_into_baskets(fruits) {
 
   return maxLength;
 }
-  
-  
-  console.log(`Maximum number of fruits: ${fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])}`);
-  console.log(`Maximum number of fruits: ${fruits_into_baskets(['A', 'B', 'C', 'B', 'B', 'C'])}`);
+
+
+console.log(`Maximum number of fruits: ${fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])}`);
+console.log(`Maximum number of fruits: ${fruits_into_baskets(['A', 'B', 'C', 'B', 'B', 'C'])}`);
 
 /*  Time Complexity 
 The time complexity of the above algorithm will be O(N) where ‘N’ is the number of characters in the input array. The outer for loop runs for all characters and the inner while loop processes each character only once, therefore the time complexity of the algorithm will be O(N+N) which is asymptotically equivalent to O(N).
