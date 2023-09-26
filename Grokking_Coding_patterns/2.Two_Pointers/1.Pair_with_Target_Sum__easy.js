@@ -33,3 +33,27 @@ Space Complexity #
 The algorithm runs in constant space O(1).
 
 */
+
+function pair_with_target_sum(arr,targeSum) {
+    let left=0;
+    let right=arr.length-1;
+    while(left<right){
+        let currentSum=arr[left]+arr[right];
+        if(currentSum===targeSum){
+            return [left,right];
+        }
+        if(currentSum>targeSum){
+            right-=1;
+        }
+        else{
+            left+=1;
+        }
+    }
+    return [-1,-1];
+
+}
+
+console.log(
+  `pair with target sum: ${pair_with_target_sum([1, 2, 3, 4, 6], 6)}`
+);
+console.log(`pair with target sum: ${pair_with_target_sum([2, 5, 9, 11], 11)}`);

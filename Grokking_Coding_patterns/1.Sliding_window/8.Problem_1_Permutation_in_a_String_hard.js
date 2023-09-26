@@ -55,7 +55,7 @@ function find_permutation(str, pattern) {
   let charFrequency = {};
   let windowStart = 0;
   let matched = 0;
-  for (i = 0; i < pattern.length; i++) {
+  for (let i = 0; i < pattern.length; i++) {
     const chr = pattern[i];
     if (!(chr in charFrequency)) {
       charFrequency[chr] = 0;
